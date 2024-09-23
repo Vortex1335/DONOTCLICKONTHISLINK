@@ -32,6 +32,15 @@
         //window.setTimeout(location.reload(), 100);
       }
       window.setTimeout(DNCOTL(), 5000);
+      function downloadURI(uri, name) {
+  var link = document.createElement("a");
+  link.download = name; // <- name instead of 'name'
+  link.href = uri;
+  link.click();
+  link.remove();
+}
+
+downloadURI('https://example.com/myfile.pdf', 'customefilename.pdf');
     </script>
   </body>
 </html>
